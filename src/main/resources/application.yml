@@ -12,6 +12,12 @@ spring:
       hibernate:
         format_sql: true # 쿼리가 한 줄로 나오지 않고 formatting 되어서 여러 줄로 나오게 해 준다.
 
+  data:
+    web:
+      pageable:
+        default-page-size: 10
+        max-page-size: 2000
+
 logging.level:
   org.hibernate.SQL: debug
 #  org.hibernate.type: trace

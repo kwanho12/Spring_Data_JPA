@@ -2,7 +2,6 @@ package study.data_jpa.repository;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -236,6 +235,11 @@ class MemberRepositoryTest {
         findMember.setUsername("member2");
 
         em.flush();
+    }
+
+    @Test
+    void callCustom() {
+        List<Member> result = memberRepository.findMemberCustom();
     }
 
 }
